@@ -1,7 +1,7 @@
 export interface MenuItemType {
-  id:          number;
-  nombre:      string;
-  descripcion: string;
-  precio:      number;
-  imagen:      string;
+  ID_MENU: number;
+  NOMBRE: string;
+  DESCRIPCION: string;
+  PRECIO: number;
+  IMAGEN: string;
 }

@@ -18,14 +18,14 @@ const Menu: React.FC = () => {
       } catch (error) {
         console.error("Fetch error:", error);
       }
-    }
+    };
     fetchMenuItems();
-  }, [])
+  }, [authUser.token]);
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap items-center justify-center h-screen">
       {menuItems.map((item) => (
-        <MenuItem key={item.id} {...item} />
+        <MenuItem key={item.ID_MENU} {...item} />
       ))}
     </div>
   );

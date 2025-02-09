@@ -31,7 +31,7 @@ const Reserve: React.FC = () => {
 
   return (
     <div className="container mx-auto mt-8">
-      <h1 className="text-4xl font-bold mb-8">Reservar</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center">Reservar</h1>
       {alert && <AlertCard message={alert.message} type={alert.type} />}
       <ReservationForm onSubmit={handleReservationSubmit} />
     </div>

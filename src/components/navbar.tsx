@@ -6,9 +6,9 @@ const Navbar: React.FC = () => {
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-white text-xl font-bold">
-          Restaurant Name
+          Restaurante
         </Link>
-        <div className="space-x-4">
+        <div className="space-x-10">
           <Link href="/menu" className="text-gray-300 hover:text-white">
             Menú
           </Link>

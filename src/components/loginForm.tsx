@@ -1,14 +1,17 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { UserRequestType } from '@/types/User';
+import { useState } from "react";
+import { UserRequestType } from "@/types/User";
 
 interface LoginFormProps {
   onSubmit: (data: UserRequestType) => void;
 }
 
 const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
-  const [formData, setFormData] = useState<UserRequestType>({ usuario: '', contrasena: '' });
+  const [formData, setFormData] = useState<UserRequestType>({
+    usuario: "",
+    contrasena: "",
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -21,9 +24,17 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-4 bg-white shadow-md rounded">
+    <form
+      onSubmit={handleSubmit}
+      className="max-w-md mx-auto p-4 bg-white shadow-md rounded"
+    >
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="usuario">Usuario</label>
+        <label
+          className="block text-gray-700 text-sm font-bold mb-2"
+          htmlFor="usuario"
+        >
+          Usuario
+        </label>
         <input
           type="text"
           id="usuario"
@@ -35,7 +46,12 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="contrasena">Contraseña</label>
+        <label
+          className="block text-gray-700 text-sm font-bold mb-2"
+          htmlFor="contrasena"
+        >
+          Contraseña
+        </label>
         <input
           type="password"
           id="contrasena"
@@ -51,7 +67,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
           type="submit"
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         >
-          Iniciar Sesión
+          Iniciar sesión
         </button>
       </div>
     </form>
