@@ -25,7 +25,7 @@ const Reserve: React.FC = () => {
       setAlert({ message: `Reserva exitosa! Mesa asignada: ${response.mesa.id}`, type: 'success' });
     } catch (error) {
       console.error('Error:', error);
-      setAlert({ message: 'Lo sentimos, la reserva no pudo ser realizada.', type: 'error' });
+      setAlert({ message:  `Lo sentimos, ${error.message}`, type: 'error' });
     }
   };
 
