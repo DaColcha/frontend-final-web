@@ -17,7 +17,7 @@ const ReservationForm: React.FC<ReservationFormProps> = ({ onSubmit }) => {
     hora: '',
     cantidadPersonas: 1,
     observaciones: '',
-    usuarioId: ''
+    usuarioId: authUser.id
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -30,6 +30,7 @@ const ReservationForm: React.FC<ReservationFormProps> = ({ onSubmit }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    onSubmit(formData, authUser);
     setFormData({
       fecha: '',
       hora: '',
@@ -37,7 +38,6 @@ const ReservationForm: React.FC<ReservationFormProps> = ({ onSubmit }) => {
       observaciones: '',
       usuarioId: authUser.id
     });
-    onSubmit(formData, authUser);
   };
 
   return (
