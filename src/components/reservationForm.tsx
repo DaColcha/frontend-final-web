@@ -17,7 +17,7 @@ const ReservationForm: React.FC<ReservationFormProps> = ({ onSubmit }) => {
     hora: '',
     cantidadPersonas: 1,
     observaciones: '',
-    usuarioId: process.env.NEXT_PUBLIC_USER_ID + ''
+    usuarioId: ''
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -35,7 +35,7 @@ const ReservationForm: React.FC<ReservationFormProps> = ({ onSubmit }) => {
       hora: '',
       cantidadPersonas: 1,
       observaciones: '',
-      usuarioId: ''
+      usuarioId: authUser.id
     });
     onSubmit(formData, authUser);
   };
