@@ -36,7 +36,7 @@ const ForgotPassword: React.FC = () => {
 
   return (
     <div className="container mx-auto mt-8">
-      <h1 className="text-4xl font-bold mb-8">Recuperar Contraseña</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center">Recuperar Contraseña</h1>
       {alert && <AlertCard message={alert.message} type={alert.type} />}
       <form onSubmit={handleSubmit} className="max-w-md mx-auto p-4 bg-white shadow-md rounded">
         <div className="mb-4">
