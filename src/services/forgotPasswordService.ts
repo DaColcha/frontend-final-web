@@ -1,7 +1,7 @@
 import { ResetPasswordType } from "@/types/ResetPassword";
 
-export const updatePassword = async (formData: ResetPasswordType, nombreUsuario: string): Promise<ResetPasswordType>  => {
-    const url = `${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/auth/change-password/${nombreUsuario}`;
+export const updatePassword = async (formData: ResetPasswordType): Promise<ResetPasswordType>  => {
+    const url = `${process.env.NEXT_PUBLIC_BASE_FETCH_URL}/auth/change-password`;
   
     return fetch(url, {
       method: 'PATCH',

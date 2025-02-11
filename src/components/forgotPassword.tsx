@@ -21,7 +21,7 @@ const ForgotPassword: React.FC = () => {
     e.preventDefault();
     try {
       // Llama al servicio para actualizar la contraseña
-      await updatePassword({ contrasena: formData.nuevaContrasena }, formData.nombreUsuario);
+      await updatePassword({ contrasena: formData.nuevaContrasena, username: formData.nombreUsuario});
       setAlert({ message: 'Contraseña actualizada con éxito.', type: 'success' });
 
       // Redirigir al /menu después de un retraso
