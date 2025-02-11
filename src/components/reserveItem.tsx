@@ -118,7 +118,7 @@ const ReserveItem: React.FC<ReserveItemProps> = ({reservaEntered, onDelete} : Re
                     className="font-bold">Observaciones:</span> {reserva.observaciones !== "" ? reserva.observaciones : 'No hay observaciones'}
                 </p>
                 <p className="text-gray-700 text-base">
-                    <span className="font-bold">Mesa:</span> {reserva.mesa.id}
+                    <span className="font-bold">Mesa:</span> {reserva.mesa}
                 </p>
             </div>
             {canUpdate &&

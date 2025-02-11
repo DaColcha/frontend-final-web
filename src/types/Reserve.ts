@@ -23,7 +23,7 @@ export interface UserReservesType {
   cantidadPersonas: number;
   observaciones:    string;
   estado:           string;
-  mesa:             Mesa;
+  mesa:             number;
   id:               string;
 }
 
